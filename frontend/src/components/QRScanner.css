@@ -1,0 +1,103 @@
+/* Base styles */
+.container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%; /* Makes it adapt to smaller screens */
+  }
+  
+  .webcam {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .scan-result,
+  .status {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 18px;
+  }
+  
+  .employee-details {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .employee-details h3 {
+    color: #28a745;
+    font-size: 20px;
+  }
+  
+  .export-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+    font-size: 16px;
+  }
+  
+  .export-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 600px) {
+    .container {
+      width: 95%; /* Use more screen space */
+      padding: 15px;
+    }
+  
+    .webcam {
+      width: 100%;
+      height: auto; /* Maintain aspect ratio */
+    }
+  
+    .scan-result,
+    .status {
+      font-size: 16px;
+    }
+  
+    .employee-details {
+      padding: 10px;
+    }
+  
+    .employee-details h3 {
+      font-size: 18px;
+    }
+  
+    .export-btn {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  }
+  
+  /* Additional adjustments for tablets */
+  @media (min-width: 601px) and (max-width: 900px) {
+    .container {
+      max-width: 600px;
+    }
+  
+    .employee-details {
+      padding: 20px;
+    }
+  
+    .export-btn {
+      font-size: 18px;
+      padding: 12px 20px;
+    }
+  }
+  
