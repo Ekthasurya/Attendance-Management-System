@@ -52,7 +52,7 @@ const QRScanner = () => {
       const response = await fetch("https://attendance-management-system-ulg1.onrender.com/data/download-report"); // API call to get updated file
       const blob = await response.blob();
       saveAs(blob, "Attendance_Report.csv");
-      console.log("✅ Downloaded updated Excel file!");
+      console.log("✅ downloaded updated Excel file!");
     } catch (error) {
       console.error("🚨 Error downloading Excel:", error);
     }
