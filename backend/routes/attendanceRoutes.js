@@ -1,6 +1,7 @@
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
+const moment = require("moment-timezone");
 const Attendance = require("../models/Attendance");
 const Employee = require("../models/Employee");
 const { parse } = require("json2csv");
@@ -58,8 +59,8 @@ router.post("/check", async (req, res) => {
       return res.status(404).json({ message: "Employee not found" });
     }
 
-    const today = new Date().toLocaleDateString("en-GB"); // "DD/MM/YYYY"
-const currentTime = new Date().toLocaleTimeString("en-GB", { hour12: false });
+    const today = moment().tz("Asia/Kolkata").format("DD/MM/YYYY");
+    const currentTime = moment().tz("Asia/Kolkata").format("HH:mm:ss");
 
     let attendance = await Attendance.findOne({ name, bankBranchName, circle, date: today });
 
