@@ -6,7 +6,7 @@ export const sendAttendance = createAsyncThunk(
   "attendance/sendAttendance",
   async (qrData, { rejectWithValue }) => {
     try {
-      const response = await axios.post("http://localhost:5000/attendance/check", { qrData });
+      const response = await axios.post("https://attendance-management-system-ulg1.onrender.com/attendance/check", { qrData });
       console.log("📡 API Response:", response.data); // ✅ Debugging log
       return response.data; // Includes { message, attendance }
     } catch (error) {

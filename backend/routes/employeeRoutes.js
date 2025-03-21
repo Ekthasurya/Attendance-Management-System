@@ -5,7 +5,7 @@ const router = express.Router();
 
 // Debugging middleware to log every request to this route
 router.use((req, res, next) => {
-  console.log(`🟢 Received request: ${req.method} ${req.url}`);
+  console.log(`🟢 received request: ${req.method} ${req.url}`);
   next();
 });
 

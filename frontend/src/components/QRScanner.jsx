@@ -49,7 +49,7 @@ const QRScanner = () => {
   // ✅ Fetch latest Excel file from backend
   const exportToExcel = async () => {
     try {
-      const response = await fetch("http://localhost:5000/data/download-report"); // API call to get updated file
+      const response = await fetch("https://attendance-management-system-ulg1.onrender.com/data/download-report"); // API call to get updated file
       const blob = await response.blob();
       saveAs(blob, "Attendance_Report.csv");
       console.log("✅ Downloaded updated Excel file!");
